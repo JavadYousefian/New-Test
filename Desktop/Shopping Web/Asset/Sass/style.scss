@@ -1,0 +1,121 @@
+$font-family:"tahoma";
+$font-color:#efefef;
+$font-size:15px;
+@mixin padding($top,$right,$bottom,$left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+@mixin margin($top,$right,$bottom,$left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+
+/* Header Styles */
+.header-bg{
+    background-color:#232f3e;
+    color: #efefef;
+    .top-header{
+        p{
+            font-size: $font-size;
+        }
+        ul{
+
+            list-style: none;
+            text-align: center;
+            li{
+                display: inline;
+                padding-bottom: 10px;
+                padding-right: 0;
+                a{
+                    color: #efefef;
+                    text-decoration: none;
+                    font-size: $font-size;
+                }
+            }
+        }
+    }
+.main-menu{
+        .row{
+            position: relative;
+        }
+        .navbar-nav{
+            li{
+                position:unset;
+                ul{
+                    width: 100%;
+                div{
+                    li{
+                        i{
+                           padding-left: 2px;
+                        }  
+                        :hover{
+                             background-color:white; 
+                             color:steelblue;
+                             transform: translateX(-4px);
+                        }
+                    }
+                    img{
+                        margin-right: 60px;
+                    }
+                   
+                }
+                }
+            }
+        }
+        }
+}
+/* About Us */
+.about-us{
+    img{
+        width: 50px;
+    }
+    span{
+        line-height: 1;
+        @include margin(12px,12px ,0 ,0);
+        color:white;
+    }
+}
+/* Top products */
+.top-products{
+    div{
+        .fit-image{
+            height: unset;
+            height: fit-content;
+        }
+
+    }
+   
+}
+/*products category*/
+.products-category{
+    background-color: #f8f9fa;
+    @include margin(20px,0 ,20px ,0 );
+    .row{
+        @include margin(20px, 0, 20px,0 );
+        .custom-products-row{
+            background-color: #ffff;
+        }
+    }
+}
+/* products nav */
+.products-nav{
+    h2{
+        @include margin(25px,0 ,0 ,0);
+        font-size: 25px;
+        border-bottom: 2px solid red;
+        position:absolute;
+        bottom: -20px;
+    }
+    img{
+        &:hover{
+             transform:skewY(1.1px);
+        }
+    }
+}
+
+
+
